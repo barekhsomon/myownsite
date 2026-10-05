@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- EDIT: Replace with your name and description -->
+    <title>YOUR NAME — Creative Designer & Front-End Developer</title>
+    <meta name="description" content="Portfolio of YOUR NAME — Creative Designer & Front-End Developer crafting visually compelling digital experiences.">
+    <meta name="author" content="YOUR NAME">
+
+    <!-- Preconnect for Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ==================== NOISE OVERLAY ==================== -->
+    <svg class="noise-overlay" aria-hidden="true">
+        <filter id="noiseFilter">
+            <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/>
+        </filter>
+        <rect width="100%" height="100%" filter="url(#noiseFilter)"/>
+    </svg>
+
+    <!-- ==================== CUSTOM CURSOR ==================== -->
+    <div class="cursor-dot" aria-hidden="true"></div>
+    <div class="cursor-outline" aria-hidden="true"></div>
+
+    <!-- ==================== PAGE LOADER ==================== -->
+    <div class="page-loader" id="pageLoader" aria-hidden="true">
+        <div class="loader-content">
+            <!-- EDIT: Replace with your name -->
+            <div class="loader-name">Hi, I'm Barek</div>
+            <div class="loader-bar"><div class="loader-bar-inner"></div></div>
+        </div>
+    </div>
+
+    <!-- ==================== NAVIGATION ==================== -->
+    <header class="navbar" id="navbar" role="banner">
+        <nav class="nav-inner" aria-label="Primary navigation">
+            <!-- EDIT: Replace with your name / brand -->
+            <a href="#home" class="nav-logo">Barek<span>.</span></a>
+
+            <ul class="nav-links" id="navLinks" role="menubar">
+                <li role="none"><a href="#home" role="menuitem" class="active">Home</a></li>
+                <li role="none"><a href="#about" role="menuitem">About</a></li>
+                <li role="none"><a href="#skills" role="menuitem">Skills</a></li>
+                <li role="none"><a href="#projects" role="menuitem">Projects</a></li>
+                <li role="none"><a href="#experience" role="menuitem">Experience</a></li>
+                <li role="none"><a href="#contact" role="menuitem">Contact</a></li>
+            </ul>
+
+            <a href="#contact" class="nav-cta" id="navCta">Let's Work Together</a>
+
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="hero section" id="home" aria-label="Introduction">
+        <!-- Animated background -->
+        <div class="hero-bg" aria-hidden="true">
+            <div class="hero-blob hero-blob-1"></div>
+            <div class="hero-blob hero-blob-2"></div>
+            <div class="hero-blob hero-blob-3"></div>
+            <div class="hero-grain"></div>
+        </div>
+
+        <div class="container hero-content">
+            <!-- Text column -->
+            <div class="hero-text">
+                <span class="hero-label">Hello, I'm</span>
+                <!-- EDIT: Replace with your full name -->
+                <h1 class="hero-name">Barek Hassan</h1>
+                <!-- EDIT: Replace with your title / role -->
+                <p class="hero-title">Creative Designer & Full Stack Developer</p>
+                <!-- EDIT: Replace with your personal introduction -->
+                <p class="hero-desc">
+                    I create visually compelling digital experiences that combine creativity, design, and technology to deliver meaningful results.
+                </p>
+                <div class="hero-ctas">
+                    <a href="#projects" class="btn btn-primary">
+                        View My Work <span class="arrow">→</span>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">Let's Talk</a>
+                </div>
+            </div>
+
+            <!-- Image column -->
+            <div class="hero-image">
+                <div class="hero-portrait">
+                    <!-- Glow behind image -->
+                    <div class="hero-portrait-glow" aria-hidden="true"></div>
+                    <!-- Rotating ring -->
+                    <div class="hero-portrait-ring" aria-hidden="true"></div>
+                    <!-- Portrait frame -->
+                    <div class="hero-portrait-frame">
+                        <!--
+                            EDIT: Replace src with your professional portrait.
+                            Place your photo at: assets/profile.jpg
+                            Recommended: high-quality, professional headshot
+                        -->
+                        <img src="assets/barek.png" alt="Barek Hassan — Professional portrait" width="400" height="533">
+                        <div class="hero-portrait-fade" aria-hidden="true"></div>
+                    </div>
+                    <!-- Floating decorative elements -->
+                    <div class="hero-float hero-float-1" aria-hidden="true"></div>
+                    <div class="hero-float hero-float-2" aria-hidden="true"></div>
+                    <div class="hero-float hero-float-3" aria-hidden="true"></div>
+                    <div class="hero-float hero-float-4" aria-hidden="true"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="hero-scroll" aria-hidden="true">
+            <span>Scroll</span>
+            <div class="hero-scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- ==================== ABOUT SECTION ==================== -->
+    <section class="section" id="about" aria-label="About me">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">About Me</span>
+                <h2 class="section-title">Designing with Purpose,<br>Building with Precision</h2>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-text reveal reveal-left">
+                    <!-- EDIT: Replace the paragraphs below with your own bio -->
+                    <h3>I'm a designer & developer who believes great work sits at the intersection of <span class="accent">creativity</span> and <span class="accent">strategy</span>.</h3>
+                    <p>
+                        With a passion for crafting digital experiences that are both beautiful and functional, I bring a unique blend of design thinking and technical expertise to every project. I don't just make things look good — I make them work seamlessly.
+                    </p>
+                    <p>
+                        My approach is rooted in understanding the problem first, then designing solutions that are intentional, user-centered, and impactful. Whether it's a brand identity, a website, or a full digital campaign, I focus on quality, clarity, and results.
+                    </p>
+                    <p>
+                        I'm driven by the belief that thoughtful design has the power to transform businesses, connect with audiences, and create lasting impressions.
+                    </p>
+                </div>
+
+                <div class="about-stats reveal reveal-right">
+                    <!-- EDIT: Update the numbers below -->
+                    <div class="stat">
+                        <div class="stat-number">
+                            <span data-count="5">0</span><span class="stat-suffix">+</span>
+                        </div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">
+                            <span data-count="50">0</span><span class="stat-suffix">+</span>
+                        </div>
+                        <div class="stat-label">Projects Completed</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">
+                            <span data-count="30">0</span><span class="stat-suffix">+</span>
+                        </div>
+                        <div class="stat-label">Happy Clients</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">
+                            <span data-count="15">0</span><span class="stat-suffix">+</span>
+                        </div>
+                        <div class="stat-label">Technologies</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SKILLS SECTION ==================== -->
+    <section class="section" id="skills" aria-label="Skills">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">What I Do</span>
+                <h2 class="section-title">Skills & Expertise</h2>
+                <p class="section-subtitle">
+                    A versatile skill set built across design, development, and digital strategy.
+                </p>
+            </div>
+
+            <div class="skills-grid">
+                <!-- EDIT: Update skills as needed -->
+
+                <!-- Design -->
+                <div class="skill-card reveal reveal-d1">
+                    <div class="skill-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/>
+                        </svg>
+                    </div>
+                    <h3>Design</h3>
+                    <ul class="skill-list">
+                        <li class="skill-item">Graphic Design</li>
+                        <li class="skill-item">Branding & Identity</li>
+                        <li class="skill-item">Social Media Design</li>
+                        <li class="skill-item">Print Design</li>
+                    </ul>
+                </div>
+
+                <!-- Development -->
+                <div class="skill-card reveal reveal-d2">
+                    <div class="skill-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+                        </svg>
+                    </div>
+                    <h3>Development</h3>
+                    <ul class="skill-list">
+                        <li class="skill-item">HTML5 & Semantic Markup</li>
+                        <li class="skill-item">CSS3 & Modern Layouts</li>
+                        <li class="skill-item">JavaScript (ES6+)</li>
+                        <li class="skill-item">Python</li>
+                        <li class="skill-item">Django</li>
+                        <li class="skill-item">SQL</li>
+                        <li class="skill-item">Responsive Web Design</li>
+                        <li class="skill-item">Performance Optimization</li>
+                    </ul>
+                </div>
+
+                <!-- Strategy -->
+                <div class="skill-card reveal reveal-d3">
+                    <div class="skill-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                        </svg>
+                    </div>
+                    <h3>Strategy & Marketing</h3>
+                    <ul class="skill-list">
+                        <li class="skill-item">Digital Marketing</li>
+                        <li class="skill-item">Creative Strategy</li>
+                        <li class="skill-item">Content Creation</li>
+                        <li class="skill-item">Social Media Management</li>
+                        <li class="skill-item">Analytics & Insights</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== PROJECTS SECTION ==================== -->
+    <section class="section" id="projects" aria-label="Projects">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">Portfolio</span>
+                <h2 class="section-title">Selected Work</h2>
+                <p class="section-subtitle">
+                    A curated selection of projects that showcase my approach to design and development.
+                </p>
+            </div>
+
+            <div class="projects-grid">
+                <!--
+                    EDIT: Update project details.
+                    Update the project data in js/script.js as well.
+                    Replace images with your own project screenshots.
+                -->
+
+                <!-- Project 1 -->
+                <article class="project-card reveal reveal-d1" data-project="1" tabindex="0" role="button" aria-label="View project: E-Commerce Platform Redesign">
+                    <div class="project-img">
+                        <img src="https://images.pexels.com/photos/34804003/pexels-photo-34804003.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200" alt="E-Commerce Platform Redesign" loading="lazy">
+                        <div class="project-overlay">
+                            <span class="project-overlay-btn">View Details <span class="arrow">→</span></span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Web Design & Development</span>
+                        <h3 class="project-title">E-Commerce Platform Redesign</h3>
+                        <p class="project-desc">A modern e-commerce experience focused on usability and conversion.</p>
+                        <div class="project-tech">
+                            <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Figma</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 2 -->
+                <article class="project-card reveal reveal-d2" data-project="2" tabindex="0" role="button" aria-label="View project: Brand Identity — Artisan Studio">
+                    <div class="project-img">
+                        <img src="https://images.pexels.com/photos/41227/pexels-photo-41227.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200" alt="Brand Identity — Artisan Studio" loading="lazy">
+                        <div class="project-overlay">
+                            <span class="project-overlay-btn">View Details <span class="arrow">→</span></span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Branding & Graphic Design</span>
+                        <h3 class="project-title">Brand Identity — Artisan Studio</h3>
+                        <p class="project-desc">Comprehensive brand identity with logo, guidelines, and collateral.</p>
+                        <div class="project-tech">
+                            <span>Illustrator</span><span>Photoshop</span><span>Branding</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 3 -->
+                <article class="project-card reveal reveal-d3" data-project="3" tabindex="0" role="button" aria-label="View project: SaaS Dashboard Interface">
+                    <div class="project-img">
+                        <img src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200" alt="SaaS Dashboard Interface" loading="lazy">
+                        <div class="project-overlay">
+                            <span class="project-overlay-btn">View Details <span class="arrow">→</span></span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">UI/UX Design</span>
+                        <h3 class="project-title">SaaS Dashboard Interface</h3>
+                        <p class="project-desc">A clean analytics dashboard designed for clarity and ease of use.</p>
+                        <div class="project-tech">
+                            <span>Figma</span><span>HTML</span><span>CSS</span><span>JavaScript</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 4 -->
+                <article class="project-card reveal reveal-d4" data-project="4" tabindex="0" role="button" aria-label="View project: Digital Marketing Campaign">
+                    <div class="project-img">
+                        <img src="https://images.pexels.com/photos/8534041/pexels-photo-8534041.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200" alt="Digital Marketing Campaign" loading="lazy">
+                        <div class="project-overlay">
+                            <span class="project-overlay-btn">View Details <span class="arrow">→</span></span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Social Media & Marketing</span>
+                        <h3 class="project-title">Digital Marketing Campaign</h3>
+                        <p class="project-desc">Multi-platform campaign that boosted engagement by 40%.</p>
+                        <div class="project-tech">
+                            <span>Photoshop</span><span>After Effects</span><span>Analytics</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== EXPERIENCE SECTION ==================== -->
+    <section class="section" id="experience" aria-label="Experience">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">Experience</span>
+                <h2 class="section-title">Professional Journey</h2>
+                <p class="section-subtitle">
+                    Key milestones and roles that have shaped my career.
+                </p>
+            </div>
+
+            <!--
+                EDIT: Replace with your actual experience.
+                Each timeline-item represents one role.
+            -->
+            <div class="timeline">
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot" aria-hidden="true"></div>
+                    <span class="timeline-date">2026 - Present</span>
+                    <h3 class="timeline-role"> It Manager</h3>
+                    <p class="timeline-company">HKD Green Energy</p>
+                    <ul class="timeline-desc">
+                        <li>Lead creative direction for digital projects across web and social</li>
+                        <li>Collaborate with cross-functional teams on brand strategy</li>
+                        <li>Delivered 20+ successful client projects</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot" aria-hidden="true"></div>
+                    <span class="timeline-date">2024 — 2026</span>
+                    <h3 class="timeline-role">Senior It Officer</h3>
+                    <p class="timeline-company">Circle Interior Design & Inayat Lighting</p>
+                    <ul class="timeline-desc">
+                        <li>Lead creative direction for digital projects across web and social</li>
+                        <li>Collaborate with cross-functional teams on brand strategy</li>
+                        <li>Delivered 20+ successful client projects</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot" aria-hidden="true"></div>
+                    <span class="timeline-date">2022 — 2024</span>
+                    <h3 class="timeline-role">Front-End Developer & Designer</h3>
+                    <p class="timeline-company">Menvir</p>
+                    <ul class="timeline-desc">
+                        <li>Designed and developed responsive websites for diverse clients</li>
+                        <li>Implemented modern UI/UX practices and accessibility standards</li>
+                        <li>Mentored junior designers on design systems and workflows</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot" aria-hidden="true"></div>
+                    <span class="timeline-date">2020 — 2022</span>
+                    <h3 class="timeline-role">Front-End Developer</h3>
+                    <p class="timeline-company">Web Solution Inc</p>
+                    <ul class="timeline-desc">
+                        <li>Created brand identities, Web Designing and Development</li>
+                        <li>Managed multiple projects simultaneously with tight deadlines</li>
+                        <li>Built a strong foundation in typography, layout, and color theory</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SERVICES SECTION ==================== -->
+    <section class="section" id="services" aria-label="Services">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">Services</span>
+                <h2 class="section-title">What I Can Do For You</h2>
+                <p class="section-subtitle">
+                    From concept to execution — services tailored to bring your vision to life.
+                </p>
+            </div>
+
+            <div class="services-grid">
+                <!-- EDIT: Update service descriptions -->
+
+                <div class="service-card reveal reveal-d1">
+                    <div class="service-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/>
+                        </svg>
+                    </div>
+                    <h3>Web Design</h3>
+                    <p>Visually stunning, user-centered websites designed to convert visitors into customers.</p>
+                </div>
+
+                <div class="service-card reveal reveal-d2">
+                    <div class="service-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+                        </svg>
+                    </div>
+                    <h3>Front-End Development</h3>
+                    <p>Clean, performant, accessible code that brings designs to life with precision.</p>
+                </div>
+
+                <div class="service-card reveal reveal-d3">
+                    <div class="service-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/>
+                        </svg>
+                    </div>
+                    <h3>Graphic Design</h3>
+                    <p>Creative visuals for print and digital — from marketing materials to social media.</p>
+                </div>
+
+                <div class="service-card reveal reveal-d4">
+                    <div class="service-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <h3>Branding</h3>
+                    <p>Strategic brand identities that communicate your values and stand out.</p>
+                </div>
+
+                <div class="service-card reveal reveal-d5">
+                    <div class="service-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                        </svg>
+                    </div>
+                    <h3>Social Media Creative</h3>
+                    <p>Scroll-stopping content that builds engagement and grows your audience.</p>
+                </div>
+
+                <div class="service-card reveal reveal-d6">
+                    <div class="service-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                        </svg>
+                    </div>
+                    <h3>Digital Marketing</h3>
+                    <p>Data-driven campaigns that reach the right audience and deliver real results.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CONTACT SECTION ==================== -->
+    <section class="section" id="contact" aria-label="Contact">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">Get In Touch</span>
+                <h2 class="section-title">Have a Project in Mind?</h2>
+                <p class="section-subtitle">
+                    Let's create something meaningful, memorable, and impactful together.
+                </p>
+            </div>
+
+            <div class="contact-wrapper">
+                <div class="contact-info reveal reveal-left">
+                    <h3>Let's start a <span class="accent">conversation</span></h3>
+                    <p>
+                        Whether you have a detailed project brief or just a rough idea, I'd love to hear from you. Drop me a message and let's explore what we can create together.
+                    </p>
+
+                    <div class="contact-details">
+                        <!-- EDIT: Replace with your real contact info -->
+                        <div class="contact-item">
+                            <div class="contact-item-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <div class="contact-item-label">Email</div>
+                                <div class="contact-item-text">barekhassan0@gmail</div>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-item-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <div class="contact-item-label">Phone</div>
+                                <div class="contact-item-text">+880 1580 668 336</div>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-item-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <div class="contact-item-label">Location</div>
+                                <div class="contact-item-text">Dhaka, Bangladesh</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- EDIT: Replace with your social links -->
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Dribbble" target="_blank" rel="noopener noreferrer">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"/><path d="M19.13 5.09C15.22 9.14 10 10.44 2.25 10.94"/><path d="M21.75 12.84c-6.62-1.41-12.14 1-16.38 6.32"/><path d="M8.56 2.75c4.37 6 6 12.43 6.67 18.91"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Behance" target="_blank" rel="noopener noreferrer">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M7.5 11c2.8 0 4.2-1 4.2-3.2 0-2.3-1.6-3.3-4.3-3.3H1v13h6.7c2.9 0 4.8-1.4 4.8-3.9 0-2.6-1.8-3.6-5-3.6zM3.8 6.6h3c1.4 0 2.1.5 2.1 1.7s-.8 1.8-2.2 1.8H3.8V6.6zm3.3 9.3H3.8v-3.8h3.4c1.6 0 2.5.6 2.5 1.9s-.9 1.9-2.6 1.9zM16.4 6.5h5.3V5h-5.3v1.5zM19 9.4c-3.1 0-5 2-5 5.1 0 3.2 1.8 5.1 5 5.1 2.5 0 4.1-1.2 4.7-3.5h-2.3c-.3.9-1.1 1.5-2.3 1.5-1.7 0-2.6-1-2.7-2.7h7.4c.1-3.3-1.6-5.5-4.8-5.5zm-2.6 4.1c.2-1.5 1.1-2.3 2.6-2.3s2.3.9 2.4 2.3h-5z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <form class="contact-form reveal reveal-right" id="contactForm" novalidate>
+                    <div class="form-group">
+                        <label for="formName">Your Name</label>
+                        <input type="text" id="formName" name="name" placeholder="John Doe" required>
+                        <div class="form-error">Please enter your name.</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="formEmail">Email Address</label>
+                        <input type="email" id="formEmail" name="email" placeholder="john@example.com" required>
+                        <div class="form-error">Please enter a valid email address.</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="formSubject">Subject</label>
+                        <input type="text" id="formSubject" name="subject" placeholder="Project Inquiry" required>
+                        <div class="form-error">Please enter a subject.</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="formMessage">Message</label>
+                        <textarea id="formMessage" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+                        <div class="form-error">Please enter your message.</div>
+                    </div>
+                    <button type="submit" class="btn btn-primary form-submit">
+                        Send Message <span class="arrow">→</span>
+                    </button>
+                    <div class="form-success" id="formSuccess">
+                        Thank you! Your message has been sent successfully. I'll get back to you soon.
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer" role="contentinfo">
+        <div class="container footer-inner">
+            <!-- EDIT: Replace with your name -->
+            <p>&copy; <span id="currentYear"></span> Barek Hassan. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#projects">Work</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== PROJECT MODAL ==================== -->
+    <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-label="Project details">
+        <button class="modal-close" id="modalClose" aria-label="Close modal">✕</button>
+        <div class="modal">
+            <div class="modal-img">
+                <img id="modalImg" src="" alt="" loading="lazy">
+            </div>
+            <div class="modal-body">
+                <span class="modal-category" id="modalCategory"></span>
+                <h3 class="modal-title" id="modalTitle"></h3>
+                <p class="modal-desc" id="modalDesc"></p>
+                <div class="modal-tech" id="modalTech"></div>
+                <a href="#" id="modalLink" class="btn btn-primary btn-sm modal-link" target="_blank" rel="noopener noreferrer">
+                    View Project <span class="arrow">→</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== BACK TO TOP ==================== -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"/>
+        </svg>
+    </button>
+
+    <!-- Main Script -->
+    <script src="js/script.js"></script>
+</body>
+</html>
